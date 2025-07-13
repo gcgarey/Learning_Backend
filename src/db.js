@@ -3,7 +3,7 @@ const db = new DatabaseSync(':memory:')
 
 // Execute SQL statements from strings
 db.exec(`
-    CREATE TABLE user (
+    CREATE TABLE users (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     username TEXT UNIQUE,
     password TEXT
