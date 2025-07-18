@@ -27,7 +27,7 @@ router.post('/register', (req, res) => {
             insertToDo.run(result.lastInsertRowid, defaultToDo)
 
             // create a token that we can use later to confirm they are the correct user
-            const token = jwt.sign({id: res.lastInsertRowid}, process.env.JWT_SECRET, 
+            const token = jwt.sign({id: result.lastInsertRowid}, process.env.JWT_SECRET, 
                 { expiresIn: '24h' })
             res.json({ token })
 

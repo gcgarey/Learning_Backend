@@ -1,7 +1,7 @@
 import jwt from 'jsonwebtoken'
 
 function authMiddleware (req, res, next) {
-    const token = req.headers['authotization']
+    const token = req.headers['authorization']
 
     if (!token) {return res.status(404).json({message: "no token provided"})}
 
